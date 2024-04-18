@@ -2,5 +2,5 @@
 
 public class XApp
 {
-
+    public List<XAppFile> AppFiles { get; set; }
 }
