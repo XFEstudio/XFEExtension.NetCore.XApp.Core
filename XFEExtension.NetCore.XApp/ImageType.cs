@@ -10,6 +10,10 @@ public enum ImageType
     /// </summary>
     Jpg,
     /// <summary>
+    /// Jpeg格式
+    /// </summary>
+    Jpeg,
+    /// <summary>
     /// Png格式
     /// </summary>
     Png,
