@@ -12,12 +12,12 @@
 /// <param name="authorMail">作者电子邮件</param>
 /// <param name="projectWebSite">项目网站</param>
 /// <param name="projectGitHub">项目源码</param>
-public class XAPPInformation(string appIcon, string appName, Version appVersion, string? appDescription, string author, string? company, string? authorMail, string? projectWebSite, string? projectGitHub)
+public class XAPPInformation(string appIcon, string appName, Version appVersion, string appDescription, string author, string company, string authorMail, string projectWebSite, string projectGitHub)
 {
     /// <summary>
     /// 应用图标的Base64字符串
     /// </summary>
-    public string? AppIcon { get; init; } = appIcon;
+    public string AppIcon { get; init; } = appIcon;
     /// <summary>
     /// 应用名称
     /// </summary>
@@ -29,26 +29,26 @@ public class XAPPInformation(string appIcon, string appName, Version appVersion,
     /// <summary>
     /// 应用描述
     /// </summary>
-    public string? AppDescription { get; init; } = appDescription;
+    public string AppDescription { get; init; } = appDescription;
     /// <summary>
     /// 作者
     /// </summary>
-    public string? Author { get; init; } = author;
+    public string Author { get; init; } = author;
     /// <summary>
     /// 公司
     /// </summary>
-    public string? Company { get; init; } = company;
+    public string Company { get; init; } = company;
     /// <summary>
     /// 作者电子邮件
     /// </summary>
-    public string? AuthorMail { get; init; } = authorMail;
+    public string AuthorMail { get; init; } = authorMail;
     /// <summary>
     /// 项目网站
     /// </summary>
-    public string? ProjectWebSite { get; init; } = projectWebSite;
+    public string ProjectWebSite { get; init; } = projectWebSite;
     /// <summary>
     /// 项目源码
     /// </summary>
-    public string? ProjectGitHub { get; init; } = projectGitHub;
+    public string ProjectGitHub { get; init; } = projectGitHub;
 }
 

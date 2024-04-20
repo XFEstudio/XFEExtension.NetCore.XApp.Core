@@ -9,7 +9,7 @@ namespace XFEExtension.NetCore.XApp;
 /// <param name="fileName">文件名</param>
 /// <param name="fileContent">文件内容</param>
 [CreateImpl]
-public abstract class XAppFile(XAppFileType fileType, string? fileName, string? fileContent)
+public abstract class XAppFile(XAppFileType fileType, string? fileName, string? fileContent) : IXAppFile
 {
     /// <summary>
     /// 文件类型
