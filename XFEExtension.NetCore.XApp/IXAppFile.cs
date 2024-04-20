@@ -12,7 +12,7 @@ public interface IXAppFile
     /// <summary>
     /// 文件名
     /// </summary>
-    string? FileName { get; set; }
+    string FileName { get; set; }
     /// <summary>
     /// 文件类型
     /// </summary>

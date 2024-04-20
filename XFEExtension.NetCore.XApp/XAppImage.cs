@@ -10,7 +10,7 @@ namespace XFEExtension.NetCore.XApp;
 /// <param name="imageBase64String">图片Base64字符串</param>
 /// <param name="imageType">图片类型</param>
 [CreateImpl]
-public abstract class XAppImage(XAppFileType fileType, string? fileName, string imageBase64String, ImageType imageType) : XAppFile(fileType, fileName, imageBase64String)
+public abstract class XAppImage(XAppFileType fileType, string fileName, string imageBase64String, ImageType imageType) : XAppFile(fileType, fileName, imageBase64String)
 {
     /// <summary>
     /// 图片Base64字符串

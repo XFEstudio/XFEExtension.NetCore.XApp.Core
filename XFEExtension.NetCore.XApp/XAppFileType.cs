@@ -8,11 +8,11 @@ public enum XAppFileType
     /// <summary>
     /// XApp的后端C#代码
     /// </summary>
-    XCS,
+    XFCS,
     /// <summary>
     /// XApp的前端代码
     /// </summary>
-    XXML,
+    XFML,
     /// <summary>
     /// XApp的图标
     /// </summary>
