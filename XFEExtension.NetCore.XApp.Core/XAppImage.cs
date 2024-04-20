@@ -1,6 +1,6 @@
 ﻿using XFEExtension.NetCore.ImplExtension;
 
-namespace XFEExtension.NetCore.XApp;
+namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp图片文件

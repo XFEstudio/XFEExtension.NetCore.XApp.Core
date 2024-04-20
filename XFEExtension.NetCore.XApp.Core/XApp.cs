@@ -1,6 +1,6 @@
 ﻿using XFEExtension.NetCore.FormatExtension;
 
-namespace XFEExtension.NetCore.XApp;
+namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp类

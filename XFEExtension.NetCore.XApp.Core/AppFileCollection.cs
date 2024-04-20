@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Text.Json;
 
-namespace XFEExtension.NetCore.XApp;
+namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// App文件集合

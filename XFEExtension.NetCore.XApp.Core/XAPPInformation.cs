@@ -1,4 +1,4 @@
-﻿namespace XFEExtension.NetCore.XApp;
+﻿namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp程序信息

@@ -1,4 +1,4 @@
-﻿namespace XFEExtension.NetCore.XApp;
+﻿namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp的文件类型
