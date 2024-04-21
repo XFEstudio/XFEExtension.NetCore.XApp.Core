@@ -1,1 +1,1 @@
-# XFEExtension.NetCore.XApp
+# XFEExtension.NetCore.XApp.Core

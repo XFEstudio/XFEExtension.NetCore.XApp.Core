@@ -8,6 +8,14 @@ namespace XFEExtension.NetCore.XApp.Core;
 public class XApp
 {
     /// <summary>
+    /// 应用名称
+    /// </summary>
+    public string Name { get => AppInformation.AppName; }
+    /// <summary>
+    /// 应用ID
+    /// </summary>
+    public string ID { get => AppInformation.AppID; }
+    /// <summary>
     /// XApp的信息
     /// </summary>
     public required XAPPInformation AppInformation { get; set; }
@@ -27,6 +35,7 @@ public class XApp
                 "AppInformation", new XFEDictionary
                 {
                     { "AppIcon", AppInformation.AppIcon },
+                    { "AppId", AppInformation.AppID },
                     { "AppName", AppInformation.AppName },
                     { "AppVersion", AppInformation.AppVersion.ToString() },
                     { "AppDescription", AppInformation.AppDescription },
@@ -58,15 +67,16 @@ public class XApp
         XFEDictionary appInformation = appDictionary["AppInformation"]!;
         return new XApp
         {
-            AppInformation = new XAPPInformation(appInformation["AppIcon"]!.ToString(),
-                                                 appInformation["AppName"]!.ToString(),
-                                                 Version.Parse(appInformation["AppVersion"]!.ToString()),
-                                                 appInformation["AppDescription"]!.ToString(),
-                                                 appInformation["Author"]!.ToString(),
-                                                 appInformation["Company"]!.ToString(),
-                                                 appInformation["AuthorEmail"]!.ToString(),
-                                                 appInformation["ProjectWebSite"]!.ToString(),
-                                                 appInformation["ProjectGitHub"]!.ToString()),
+            AppInformation = new XAPPInformation(appInformation["AppIcon"]!,
+                                                 appInformation["AppId"]!,
+                                                 appInformation["AppName"]!,
+                                                 Version.Parse(appInformation["AppVersion"]!),
+                                                 appInformation["AppDescription"]!,
+                                                 appInformation["Author"]!,
+                                                 appInformation["Company"]!,
+                                                 appInformation["AuthorEmail"]!,
+                                                 appInformation["ProjectWebSite"]!,
+                                                 appInformation["ProjectGitHub"]!),
             AppFiles = AppFileCollection.FromJson(appDictionary["AppFiles"]!) ?? []
         };
     }
