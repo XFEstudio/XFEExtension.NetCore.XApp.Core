@@ -16,6 +16,10 @@ public class XApp
     /// </summary>
     public string ID { get => AppInformation.AppID; }
     /// <summary>
+    /// 作者的UID
+    /// </summary>
+    public string AuthorUID { get => AppInformation.AuthorUID; }
+    /// <summary>
     /// XApp的信息
     /// </summary>
     public required XAPPInformation AppInformation { get; set; }
