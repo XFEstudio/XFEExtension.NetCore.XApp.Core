@@ -14,11 +14,11 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/XFEstudio/XFEExtension.NetCore.XApp.Core</RepositoryUrl>
     <PackageTags>XFE;XApp</PackageTags>
-    <PackageReleaseNotes>First Release</PackageReleaseNotes>
+    <PackageReleaseNotes>优化结构，为XApp程序信息添加作者UID属性</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>XFEstudio</Authors>
     <Company>寰宇朽力网络科技有限公司</Company>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
