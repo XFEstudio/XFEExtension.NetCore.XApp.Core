@@ -1,4 +1,6 @@
-﻿namespace XFEExtension.NetCore.XApp.Core;
+﻿using XFEExtension.NetCore.FormatExtension;
+
+namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp程序信息
@@ -14,7 +16,7 @@
 /// <param name="authorMail">作者电子邮件</param>
 /// <param name="projectWebSite">项目网站</param>
 /// <param name="projectGitHub">项目源码</param>
-public class XAPPInformation(string appIcon, string appId, string appName, Version appVersion, string appDescription, string author, string authorUid, string company, string authorMail, string projectWebSite, string projectGitHub)
+public class XAppInformation(string appIcon, string appId, string appName, Version appVersion, string appDescription, string author, string authorUid, string company, string authorMail, string projectWebSite, string projectGitHub)
 {
     /// <summary>
     /// 应用图标的Base64字符串
@@ -60,5 +62,24 @@ public class XAPPInformation(string appIcon, string appId, string appName, Versi
     /// 项目源码
     /// </summary>
     public string ProjectGitHub { get; init; } = projectGitHub;
+    /// <summary>
+    /// 解包为XAppInformation
+    /// </summary>
+    /// <param name="appInfoDictionary">app信息字典</param>
+    /// <returns></returns>
+    public static XAppInformation UnPackage(XFEDictionary appInfoDictionary)
+    {
+        return new XAppInformation(appInfoDictionary["AppIcon"]!,
+                                   appInfoDictionary["AppId"]!,
+                                   appInfoDictionary["AppName"]!,
+                                   Version.Parse(appInfoDictionary["AppVersion"]!),
+                                   appInfoDictionary["AppDescription"]!,
+                                   appInfoDictionary["Author"]!,
+                                   appInfoDictionary["AuthorUID"]!,
+                                   appInfoDictionary["Company"]!,
+                                   appInfoDictionary["AuthorEmail"]!,
+                                   appInfoDictionary["ProjectWebSite"]!,
+                                   appInfoDictionary["ProjectGitHub"]!);
+    }
 }
 

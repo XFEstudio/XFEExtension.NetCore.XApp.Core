@@ -22,7 +22,7 @@ public class XApp
     /// <summary>
     /// XApp的信息
     /// </summary>
-    public required XAPPInformation AppInformation { get; set; }
+    public required XAppInformation AppInformation { get; set; }
     /// <summary>
     /// XApp的文件集合
     /// </summary>
@@ -72,17 +72,7 @@ public class XApp
         XFEDictionary appInformation = appDictionary["AppInformation"]!;
         return new XApp
         {
-            AppInformation = new XAPPInformation(appInformation["AppIcon"]!,
-                                                 appInformation["AppId"]!,
-                                                 appInformation["AppName"]!,
-                                                 Version.Parse(appInformation["AppVersion"]!),
-                                                 appInformation["AppDescription"]!,
-                                                 appInformation["Author"]!,
-                                                 appInformation["AuthorUID"]!,
-                                                 appInformation["Company"]!,
-                                                 appInformation["AuthorEmail"]!,
-                                                 appInformation["ProjectWebSite"]!,
-                                                 appInformation["ProjectGitHub"]!),
+            AppInformation = XAppInformation.UnPackage(appInformation),
             AppFiles = AppFileCollection.FromJson(appDictionary["AppFiles"]!) ?? []
         };
     }
