@@ -44,6 +44,11 @@ public class XApp
         return appDictionary;
     }
     /// <summary>
+    /// 从字典中加载App文件
+    /// </summary>
+    /// <param name="fileDictionary">文件字典</param>
+    public void LoadFiles(XFEDictionary fileDictionary) => AppFiles = AppFileCollection.FromJson(fileDictionary)!;
+    /// <summary>
     /// 从字典中解包为XApp
     /// </summary>
     /// <param name="appDictionary">字典对象或字符串</param>
