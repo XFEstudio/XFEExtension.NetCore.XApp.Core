@@ -9,11 +9,12 @@
 /// <param name="appVersion">应用版本</param>
 /// <param name="appDescription">描述</param>
 /// <param name="author">作者</param>
+/// <param name="authorUid">作者的UID</param>
 /// <param name="company">公司</param>
 /// <param name="authorMail">作者电子邮件</param>
 /// <param name="projectWebSite">项目网站</param>
 /// <param name="projectGitHub">项目源码</param>
-public class XAPPInformation(string appIcon, string appId, string appName, Version appVersion, string appDescription, string author, string company, string authorMail, string projectWebSite, string projectGitHub)
+public class XAPPInformation(string appIcon, string appId, string appName, Version appVersion, string appDescription, string author, string authorUid, string company, string authorMail, string projectWebSite, string projectGitHub)
 {
     /// <summary>
     /// 应用图标的Base64字符串
@@ -39,6 +40,10 @@ public class XAPPInformation(string appIcon, string appId, string appName, Versi
     /// 作者
     /// </summary>
     public string Author { get; init; } = author;
+    /// <summary>
+    /// 作者UID
+    /// </summary>
+    public string AuthorUID { get; init; } = authorUid;
     /// <summary>
     /// 公司
     /// </summary>
