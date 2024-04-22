@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Text.Json;
+using XFEExtension.NetCore.FormatExtension;
 
 namespace XFEExtension.NetCore.XApp.Core;
 
@@ -98,26 +99,13 @@ public class AppFileCollection : IList<XAppFile>
     /// 打包
     /// </summary>
     /// <returns></returns>
-    public string Package() => JsonSerializer.Serialize(appFiles);
+    public XFEMultiDictionary Package() => AppFilePackageHelper.Package(this);
     /// <summary>
-    /// 从Json创建对象
+    /// 从字典中解包
     /// </summary>
-    /// <param name="json">json字符串</param>
+    /// <param name="appFileDictionary">字典</param>
     /// <returns></returns>
-    public static AppFileCollection? FromJson(string json)
-    {
-        var appFileCollection = new AppFileCollection();
-        var appFileList = JsonSerializer.Deserialize<List<XAppFile>>(json);
-        if (appFileList is null)
-        {
-            return null;
-        }
-        else
-        {
-            appFileCollection.appFiles = appFileList;
-            return appFileCollection;
-        }
-    }
+    public static AppFileCollection? UnPackage(XFEMultiDictionary appFileDictionary) => AppFilePackageHelper.UnPackage(appFileDictionary);
     /// <summary>
     /// 移除指定文件
     /// </summary>
