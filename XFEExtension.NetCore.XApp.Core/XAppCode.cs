@@ -15,4 +15,12 @@ public abstract class XAppCode(XAppFileType fileType, string fileName, string? c
     /// 代码内容
     /// </summary>
     public string? Code { get; set; } = code;
+    /// <summary>
+    /// 从代码中创建
+    /// </summary>
+    /// <param name="fileType">代码文件类型</param>
+    /// <param name="fileName">文件名</param>
+    /// <param name="code">代码</param>
+    /// <returns></returns>
+    public static XAppCode FromCode(XAppFileType fileType, string fileName, string? code) => new XAppCodeImpl(fileType, fileName, code);
 }
