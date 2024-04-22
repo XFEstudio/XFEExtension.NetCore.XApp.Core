@@ -61,7 +61,7 @@ public class XApp
     /// 从字典中加载App文件
     /// </summary>
     /// <param name="fileDictionary">文件字典</param>
-    public void LoadFiles(XFEDictionary fileDictionary) => AppFiles = AppFileCollection.FromJson(fileDictionary)!;
+    public void LoadFiles(XFEMultiDictionary fileDictionary) => AppFiles = AppFileCollection.UnPackage(fileDictionary)!;
     /// <summary>
     /// 从字典中解包为XApp
     /// </summary>
@@ -73,7 +73,7 @@ public class XApp
         return new XApp
         {
             AppInformation = XAppInformation.UnPackage(appInformation),
-            AppFiles = AppFileCollection.FromJson(appDictionary["AppFiles"]!) ?? []
+            AppFiles = AppFileCollection.UnPackage(appDictionary["AppFiles"]!) ?? []
         };
     }
 }
