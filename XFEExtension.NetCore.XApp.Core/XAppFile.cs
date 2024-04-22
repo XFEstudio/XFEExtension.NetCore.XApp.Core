@@ -11,13 +11,13 @@ public abstract class XAppFile(XAppFileType fileType, string fileName, string? f
     /// <summary>
     /// 文件类型
     /// </summary>
-    public required XAppFileType FileType { get; set; } = fileType;
+    public XAppFileType FileType { get; set; } = fileType;
     /// <summary>
     /// 文件名
     /// </summary>
-    public required string FileName { get; set; } = fileName;
+    public string FileName { get; set; } = fileName;
     /// <summary>
     /// 文件内容
     /// </summary>
-    public required string? FileContent { get; set; } = fileContent;
+    public string? FileContent { get; set; } = fileContent;
 }

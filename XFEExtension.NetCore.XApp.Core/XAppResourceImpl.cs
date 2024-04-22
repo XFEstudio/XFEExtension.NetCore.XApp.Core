@@ -1,11 +1,9 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Text.Json.Serialization;
 
 namespace XFEExtension.NetCore.XApp.Core;
 
 internal class XAppResourceImpl : XAppResource
 {
-    [SetsRequiredMembers]
+    [JsonConstructor]
     internal XAppResourceImpl(XAppFileType fileType, string fileName, string? resourceBase64String, string? resourceType) : base(fileType, fileName, resourceBase64String, resourceType) { }
-    [SetsRequiredMembers]
-    internal XAppResourceImpl() : this(default, default!, default, default) { }
 }
