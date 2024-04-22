@@ -9,7 +9,6 @@ namespace XFEExtension.NetCore.XApp.Core;
 /// <param name="fileName">文件名</param>
 /// <param name="resourceBase64String">资源文件Base64字符串</param>
 /// <param name="resourceType">资源文件扩展名</param>
-[CreateImpl]
 public abstract class XAppResource(XAppFileType fileType, string fileName, string? resourceBase64String, string? resourceType) : XAppFile(fileType, fileName, resourceBase64String)
 {
     /// <summary>

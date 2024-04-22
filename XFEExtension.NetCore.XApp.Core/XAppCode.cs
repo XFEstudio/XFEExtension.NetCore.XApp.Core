@@ -1,6 +1,4 @@
-﻿using XFEExtension.NetCore.ImplExtension;
-
-namespace XFEExtension.NetCore.XApp.Core;
+﻿namespace XFEExtension.NetCore.XApp.Core;
 
 /// <summary>
 /// XApp的代码文件
@@ -8,7 +6,6 @@ namespace XFEExtension.NetCore.XApp.Core;
 /// <param name="fileType">文件类型</param>
 /// <param name="fileName">文件名</param>
 /// <param name="code">代码内容</param>
-[CreateImpl]
 public abstract class XAppCode(XAppFileType fileType, string fileName, string? code) : XAppFile(fileType, fileName, code)
 {
     /// <summary>
