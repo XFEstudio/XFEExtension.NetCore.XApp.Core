@@ -6,13 +6,17 @@
 public enum XAppFileType
 {
     /// <summary>
-    /// XApp的后端C#代码
+    /// XApp页面的后端C#代码
     /// </summary>
     XFCS,
     /// <summary>
-    /// XApp的前端代码
+    /// XApp页面的前端代码
     /// </summary>
     XFML,
+    /// <summary>
+    /// C#逻辑代码
+    /// </summary>
+    CS,
     /// <summary>
     /// XApp的图标
     /// </summary>
