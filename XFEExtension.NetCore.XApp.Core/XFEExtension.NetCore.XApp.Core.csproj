@@ -14,11 +14,11 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/XFEstudio/XFEExtension.NetCore.XApp.Core</RepositoryUrl>
     <PackageTags>XFE;XApp</PackageTags>
-    <PackageReleaseNotes>XAppFileType中添加C#逻辑代码枚举</PackageReleaseNotes>
+    <PackageReleaseNotes>XApp增加程序集字节</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Authors>XFEstudio</Authors>
     <Company>寰宇朽力网络科技有限公司</Company>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
   <ItemGroup>

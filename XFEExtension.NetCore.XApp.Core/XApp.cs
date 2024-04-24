@@ -28,6 +28,10 @@ public class XApp
     /// </summary>
     public AppFileCollection AppFiles { get; set; } = [];
     /// <summary>
+    /// 程序集字符
+    /// </summary>
+    public byte[]? AssemblyBytes { get; set; }
+    /// <summary>
     /// 打包为完整的XApp字典
     /// </summary>
     /// <returns></returns>
@@ -55,6 +59,8 @@ public class XApp
                 "AppFiles", AppFiles.Package()
             }
         };
+        if (AssemblyBytes is not null)
+            appDictionary.Add("Assembly", Convert.ToBase64String(AssemblyBytes));
         return appDictionary;
     }
     /// <summary>
@@ -70,10 +76,12 @@ public class XApp
     public static XApp UnPackage(XFEDictionary appDictionary)
     {
         XFEDictionary appInformation = appDictionary["AppInformation"]!;
+        var assemblyBase64String = appDictionary["Assembly"];
         return new XApp
         {
             AppInformation = XAppInformation.UnPackage(appInformation),
-            AppFiles = AppFileCollection.UnPackage(appDictionary["AppFiles"]!) ?? []
+            AppFiles = AppFileCollection.UnPackage(appDictionary["AppFiles"]!) ?? [],
+            AssemblyBytes = assemblyBase64String is not null ? Convert.FromBase64String(assemblyBase64String) : null
         };
     }
 }
